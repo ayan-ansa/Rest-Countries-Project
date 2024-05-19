@@ -1,0 +1,25 @@
+.shimmer-card {
+    height: 350px;
+    background-color: hsl(209, 23%, 22%);
+}
+
+.flag-container {
+    width: 100%;
+    height: 150px;
+    background: hsl(208, 20%, 41%);
+}
+
+.detail {
+    border-radius: 3px;
+    margin: auto;
+    margin-top: 8px;
+    width: 90%;
+    height: 25px;
+    background: hsl(208, 20%, 41%);
+}
+
+.country-name {
+    width: 94%;
+    height: 33px;
+    margin: 12px auto;
+}

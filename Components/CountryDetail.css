@@ -1,0 +1,89 @@
+.card-text-info p {
+    margin: .5rem 0;
+}
+
+main {
+    min-height: calc(100vh - 72px);
+}
+
+.card-info {
+    margin-top: 2rem;
+}
+
+.back-btn {
+    font-size: 1rem;
+    padding: .3rem .95rem;
+    border-radius: 3px;
+    background-color: var(--background-color);
+    cursor: pointer;
+}
+
+.back-btn i {
+    font-size: .95rem;
+}
+
+.country-card-detail {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.country-flag img {
+    width: 400px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+
+.card-text-info {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.border-countries {
+    margin-top: 2rem;
+    display: flex;
+    max-width: 450px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.border-countries a {
+    padding: 4px 16px;
+    border-radius: 4px;
+
+}
+
+@media (max-width:864px) {
+
+    .country-card-detail {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width:580px) {
+    .card-text-info {
+        flex-direction: column;
+
+    }
+}
+
+@media (max-width:417px) {
+    .country-flag img {
+        width: 350px;
+    }
+    .country-card-detail{
+        gap: 1rem;
+    }
+}
+@media (max-width:367px) {
+    .country-flag img {
+        width: 300px;
+    }
+    .country-card-detail{
+        gap: 0;
+    }
+}
