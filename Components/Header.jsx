@@ -3,11 +3,6 @@ import { useTheme } from "../hooks/useTheme";
 const Header = () => {
   const [isDark, setIsdark] = useTheme();
 
-  // if (isDark) {
-  //   document.body.classList.add("dark"); //Manipulating DOM is not good practice in react
-  // } else {
-  //   document.body.classList.remove("dark");
-  // }
   return (
     <header className={`header-container ${isDark ? "dark" : ""}`}>
       <div className="header-content">
