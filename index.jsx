@@ -2,7 +2,6 @@ import { createRoot } from "react-dom/client";
 import App from "./App";
 import Home from "./Components/Home";
 import CountryDetail from "./Components/CountryDetail";
-import Contact from "./Components/Contact";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -13,10 +12,6 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-      },
-      {
-        path: "/contact",
-        element: <Contact />,
       },
       {
         path: "/:country",
