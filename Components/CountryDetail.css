@@ -32,7 +32,6 @@ main {
 .country-flag img {
     width: 400px;
     cursor: pointer;
-    border: 1px solid #ddd;
 }
 
 .card-text-info {
