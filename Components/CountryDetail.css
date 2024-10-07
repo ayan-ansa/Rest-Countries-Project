@@ -14,7 +14,7 @@ main {
     font-size: 1rem;
     padding: .3rem .95rem;
     border-radius: 3px;
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
     cursor: pointer;
 }
 
