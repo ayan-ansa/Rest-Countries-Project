@@ -6,10 +6,9 @@ export default function CountryCard({
   population,
   region,
   data,
-  key,
 }) {
   return (
-    <Link className="country-card" to={name} state={data} key={key}>
+    <Link className="country-card" to={name} state={data} key={name}>
       <img src={imageUrl} alt={name} />
       <div className="card-text">
         <h3 className="card-title">{name}</h3>

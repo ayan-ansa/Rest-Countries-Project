@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 import CountryDetailShimmer from "./CountryDetailShimmer";
 import { useTheme } from "../hooks/useTheme";
+import { BASE_URL } from "./CountriesList";
 import "./CountryDetail.css";
 
 export default function CountryDetail() {
@@ -30,7 +31,7 @@ export default function CountryDetail() {
     }
     Promise.all(
       data.borders.map((border) => {
-        return fetch(`https://restcountries.com/v3.1/alpha/${border}`)
+        return fetch(`${BASE_URL}/alpha/${border}`)
           .then((res) => res.json())
           .then(([borderCountry]) => borderCountry.name.common);
       })
@@ -52,9 +53,9 @@ export default function CountryDetail() {
         updateCountryData(data);
       })
       .catch((err) => {
-        setNotFound(true); //when we set the data then useEffect() again called
+        setNotFound(true);
       });
-  }, [countryName]); //Dependency array  When the country name will be changed then useEffect() again called
+  }, [countryName]);
   if (notFound) {
     return <div>Country not found</div>;
   }
@@ -100,8 +101,8 @@ export default function CountryDetail() {
               {data.borders.length !== 0 && (
                 <div className="border-countries">
                   <b>Border-Countries</b>
-                  {data.borders.map((border) => (
-                    <Link to={`/${border}`}>{border}</Link>
+                  {data.borders.map((border,idx) => (
+                    <Link key={idx} to={`/${border}`}>{border}</Link>
                   ))}
                 </div>
               )}

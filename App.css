@@ -159,7 +159,7 @@ a {
 .border-countries a,
 .back-btn {
     border: 1px solid var(--text-color);
-    color: var(--text-color);
+    /* color: var(--text-color); */
 }
 
 
